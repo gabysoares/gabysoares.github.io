@@ -12,10 +12,11 @@
 
 
 function myFunction() {
-	var password = "test";
-  userpwd = prompt("enter pwd");
-  if (userpwd !== password) {
-  	alert("Repent")
+	var password = "jesus wept";
+	var finalpassword = password.toLowerCase();
+  userpwd = prompt("John 11:35");
+  if (userpwd !== finalpassword) {
+  	alert("repent")
   	window.location.href = "info.html";
   } else {
   	alert("welcome")
