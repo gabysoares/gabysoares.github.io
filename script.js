@@ -43,7 +43,7 @@ if (!_token) {
 
 // Make a call using the token
 $.ajax({
-   url: "https://api.spotify.com/v1/me/top/artists",
+   url: "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50",
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
