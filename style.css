@@ -6,17 +6,16 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #ee6c4d;
 }
 
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
+/*.btn-default,*/
+.btn-default:hover {
+  color: #ee6c4d;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #eee;
+  border: 2px solid #293241;
 }
 
 
@@ -27,12 +26,12 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #ee6c4d;
 }
 body {
-  color: #fff;
+  color: #ee6c4d;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  /*text-shadow: 0 1px 3px rgba(0,0,0,.5);*/
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -48,7 +47,7 @@ body {
   display: table-cell;
   vertical-align: top;
   /*background-color: #cc0066;*/
-  background: linear-gradient(to bottom, #ff0066 0%, #ff99cc 78%);
+  background: #e0fbfc;
 }
 .cover-container {
   margin-right: auto;
@@ -80,7 +79,7 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
+  color: #ee6c4d; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
 }
@@ -93,8 +92,8 @@ body {
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #ee6c4d;
+  border-bottom-color: #ee6c4d;
 }
 
 @media (min-width: 768px) {
