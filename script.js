@@ -2,11 +2,9 @@
 
 function myFunction(){
 
-  {
     var elem = document.getElementById("button1");
     if (elem.value=="Authorize Spotify") elem.value = "Create playlist";
     else elem.value = "Create playlist";
-}
 
   console.log("test");
 
