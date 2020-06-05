@@ -1,6 +1,14 @@
-// Get the hash of the url
+// Get the hash of the ur
 
 function myFunction(){
+
+  {
+    var elem = document.getElementById("button1");
+    if (elem.value=="Authorize Spotify") elem.value = "Create playlist";
+    else elem.value = "Create playlist";
+}
+
+  console.log("test");
 
 const hash = window.location.hash
 .substring(1)
@@ -47,6 +55,6 @@ $.ajax({
    }
 });
 
-console.log(data.items);
+console.log(_token);
 
 }
