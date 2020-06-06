@@ -2,9 +2,6 @@
 
 function myFunction(){
 
-    var elem = document.getElementById("button1");
-    if (elem.value=="Authorize Spotify") elem.value = "Create playlist";
-    else elem.value = "Create playlist";
 
   console.log("test");
 
@@ -39,7 +36,10 @@ if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
  
- getTracks(_token);
+var elem = document.getElementById("button1");
+if (elem.value=="Authorize Spotify") elem.value = "Create playlist";
+else elem.value = "Create playlist"; 
+getTracks(_token);
 
 }
 // Make a call using the token
