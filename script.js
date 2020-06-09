@@ -2,7 +2,6 @@
 
 function myFunction(){
 
-
 console.log("test");
 
 const hash = window.location.hash
@@ -21,10 +20,11 @@ window.location.hash = '';
 let _token = hash.access_token;
 
 const authEndpoint = 'https://accounts.spotify.com/authorize';
+// https://gabysoares.github.io/#access_token=BQAJRenmXoRUmD9QJ_jnP-nxljSoN8HIVSPICTnCClQVUHnIeVpscciEV3iVfWHerkNKgZNR_3sH4DwFIKrwmhfdtvT9kvZliZ96wCgGzGNmznAqhXKvTUuZR59MN2UFPYxQIbHkw0OkQE2H4SwN9OGbrpcTtSDmgqYb8i1aCZm0Xh4WZn9-SlDo7wnieWOgTiXmNss1zwJrsrFoS_jE86Dkj10&token_type=Bearer&expires_in=3600
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = 'abf07e6e514347eb8e09018fb199192a';
-const redirectUri = 'https://gabysoares.github.io/';
+const redirectUri = 'https://gabysoares.github.io/#access_token' + _token + 'token_type=Bearer&expires_in=3600';
 const scopes = [
   'user-top-read',
   'playlist-modify-public', 
