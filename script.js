@@ -11,7 +11,7 @@ if (_token){
    success: function(data) { 
      // Do something with the returned data
      data.items.map(function(track) {
-       let item = $('<li>' + track.name + ' - ' +track.artist + '</li>');
+       let item = $('<li>' + track.name + ' - ' +track.artists[0] + '</li>');
        item.appendTo($('#top-tracks'));
      });
    }
