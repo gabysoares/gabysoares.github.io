@@ -34,12 +34,12 @@ const scopes = [
 // If there is no token, redirect to Spotify authorization
 if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
-} else {
-  getTracks(_token);
-}
- 
+} 
 
+if (_token){
+    getTracks(_token);
 
+} 
 
 }
 // Make a call using the token
