@@ -45,7 +45,7 @@ $.ajax({
    success: function(data) { 
      // Do something with the returned data
      data.items.map(function(track) {
-       let item = $('<li>' + track.name + '</li>');
+       let item = $('<li>' + track.name + ' - ' +track.artist + '</li>');
        item.appendTo($('#top-tracks'));
      });
    }
