@@ -24,7 +24,7 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = 'abf07e6e514347eb8e09018fb199192a';
-const redirectUri = 'https://gabysoares.github.io/#access_token' + _token + 'token_type=Bearer&expires_in=3600';
+const redirectUri = 'https://gabysoares.github.io/#access_token=' + _token + 'token_type=Bearer&expires_in=3600';
 const scopes = [
   'user-top-read',
   'playlist-modify-public', 
