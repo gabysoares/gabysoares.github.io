@@ -2,6 +2,22 @@
 
 function myFunction(){
 
+if (_token){
+
+  $.ajax({
+   url: "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50",
+   type: "GET",
+   beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
+   success: function(data) { 
+     // Do something with the returned data
+     data.items.map(function(track) {
+       let item = $('<li>' + track.name + ' - ' +track.artist + '</li>');
+       item.appendTo($('#top-tracks'));
+     });
+   }
+});
+
+}
 
 console.log("test");
 
@@ -38,17 +54,6 @@ if (!_token) {
 } 
 
 // Make a call using the token
-$.ajax({
-   url: "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50",
-   type: "GET",
-   beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-   success: function(data) { 
-     // Do something with the returned data
-     data.items.map(function(track) {
-       let item = $('<li>' + track.name + ' - ' +track.artist + '</li>');
-       item.appendTo($('#top-tracks'));
-     });
-   }
-});
+
 
 }
