@@ -24,7 +24,7 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = 'abf07e6e514347eb8e09018fb199192a';
-const redirectUri = 'https://gabysoares.github.io/#access_token=' + _token + 'token_type=Bearer&expires_in=3600';
+const redirectUri = 'https://gabysoares.github.io';
 const scopes = [
   'user-top-read',
   'playlist-modify-public', 
@@ -44,7 +44,7 @@ getTracks(_token);
 
 function getTracks(_token){
 $.ajax({
-   url: "https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50",
+   url: "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50",
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
